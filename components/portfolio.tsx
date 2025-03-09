@@ -21,6 +21,9 @@ import {
   Star,
   MessageSquare,
 } from "lucide-react"
+
+import { GraduationCap, BookOpen, School } from "lucide-react";
+ 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -40,7 +43,7 @@ const sections = [
   { id: "about", label: "About", icon: <User className="h-4 w-4" /> },
   { id: "skills", label: "Skills", icon: <Code className="h-4 w-4" /> },
   { id: "projects", label: "Projects", icon: <Layers className="h-4 w-4" /> },
-  { id: "testimonials", label: "Testimonials", icon: <MessageSquare className="h-4 w-4" /> },
+ // { id: "testimonials", label: "Testimonials", icon: <MessageSquare className="h-4 w-4" /> },
   { id: "contact", label: "Contact", icon: <Phone className="h-4 w-4" /> },
 ]
 
@@ -88,7 +91,7 @@ export default function Portfolio() {
       {/* Fixed Social Media Links */}
       <div className="fixed left-6 bottom-0 z-50 hidden md:flex flex-col gap-6 items-center after:content-[''] after:w-[1px] after:h-24 after:bg-gradient-to-b after:from-primary/50 after:to-transparent">
         <motion.a
-          href="https://github.com"
+          href="https://github.com/PuneetSharma9999"
           target="_blank"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,7 +103,7 @@ export default function Portfolio() {
           <Github className="h-5 w-5" />
         </motion.a>
         <motion.a
-          href="linkedin.com/in/puneetsharma999"
+          href="https://linkedin.com/in/puneetsharma999"
           target="_blank"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,7 +115,7 @@ export default function Portfolio() {
           <Linkedin className="h-5 w-5" />
         </motion.a>
         <motion.a
-          href="mailto:contact@example.com"
+          href="mailto:puneetsharma87734@gmail.com"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -126,7 +129,7 @@ export default function Portfolio() {
       {/* Fixed Email on Right */}
       <div className="fixed right-6 bottom-0 z-50 hidden md:flex flex-col items-center after:content-[''] after:w-[1px] after:h-24 after:bg-gradient-to-b after:from-primary/50 after:to-transparent">
         <motion.a
-          href="mailto:contact@example.com"
+          href="mailto:puneetsharma87734@gmail.com"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -187,6 +190,7 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-4"
           >
+          {/*
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -205,6 +209,7 @@ export default function Portfolio() {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
+          */}
 
             <Button
               className="hidden md:flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-gray-900 rounded-full px-6 shadow-[0_0_15px_rgba(245,158,11,0.5)]"
@@ -439,7 +444,7 @@ export default function Portfolio() {
                       <MapPin className="h-5 w-5 text-primary" />
                       <h4 className="font-medium">Location</h4>
                     </div>
-                    <p className="text-gray-400">Marutikunj, Gurugram, Haryana, 122102</p>
+                    <p className="text-gray-400">Gurugram, Haryana, INDIA, 122102</p>
                   </div>
                 </div>
 
@@ -452,53 +457,100 @@ export default function Portfolio() {
               </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-24"
-            >
-              <h3 className="text-2xl font-bold mb-8 text-center">What I'm Doing</h3>
+{/*education section in about*/}
+  <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  className="mt-24"
+>
+  {/* Section Title */}
+  <h3 className="text-3xl font-bold mb-12 text-center text-primary">Education</h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 hover:border-primary/50 transition-colors group">
-                  <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/20 flex items-center justify-center mb-6 group-hover:from-amber-400/30 group-hover:to-amber-600/30 transition-all">
-                    <Code className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">Web Development</h4>
-                  <p className="text-gray-400">High-quality development of sites at the professional level.</p>
-                </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* 10th Grade */}
+    <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center flex flex-col items-center justify-center">
+      <div className="h-14 w-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mb-4">
+        <GraduationCap className="h-7 w-7 text-white" />
+      </div>
+      <h4 className="text-xl font-semibold text-white mb-2">Secondary Education (10th)</h4>
+      <p className="text-gray-400">High School Barauli, Gopalganj | Passed in 2019</p>
+      <p className="text-gray-400">Scored: 80%</p>
+    </div>
 
-                <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 hover:border-primary/50 transition-colors group">
-                  <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/20 flex items-center justify-center mb-6 group-hover:from-amber-400/30 group-hover:to-amber-600/30 transition-all">
-                    <Layers className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">Web Design</h4>
-                  <p className="text-gray-400">The most modern and high-quality design made at a professional level.</p>
-                </div>
+    {/* 12th Grade */}
+    <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center flex flex-col items-center justify-center">
+      <div className="h-14 w-14 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-4">
+        <BookOpen className="h-7 w-7 text-white" />
+      </div>
+      <h4 className="text-xl font-semibold text-white mb-2">Higher Secondary (12th)</h4>
+      <p className="text-gray-400">Kamla Rai College, Gopalganj | Passed in 2021</p>
+      <p className="text-gray-400">Stream: Science (PCMB) | Scored: 70%</p>
+    </div>
 
-                <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 hover:border-primary/50 transition-colors group">
-                  <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/20 flex items-center justify-center mb-6 group-hover:from-amber-400/30 group-hover:to-amber-600/30 transition-all">
-                    <Smartphone className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">Mobile Apps</h4>
-                  <p className="text-gray-400">Professional development of applications for iOS and Android.</p>
-                </div>
+    {/* Graduation */}
+    <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center flex flex-col items-center justify-center">
+      <div className="h-14 w-14 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center mb-4">
+        <School className="h-7 w-7 text-white" />
+      </div>
+      <h4 className="text-xl font-semibold text-white mb-2">Bachelor of Computer Applications (BCA)</h4>
+      <p className="text-gray-400">JK Business School, Gurugram, Haryana | 2022 - Present</p>
+    </div>
+  </div>
+</motion.div>
 
-                <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 hover:border-primary/50 transition-colors group">
-                  <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/20 flex items-center justify-center mb-6 group-hover:from-amber-400/30 group-hover:to-amber-600/30 transition-all">
-                    <Database className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">Technology & Development</h4>
-                  <p className="text-gray-400">
-                    Expertise in Git and Firebase for version control and cloud database management.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+
+{/* Service Section in About */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  className="mt-24"
+>
+  <h3 className="text-3xl font-extrabold mb-12 text-center text-white tracking-wide">What I'm Doing</h3>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {[
+      {
+        icon: <Code className="h-8 w-8 text-primary" />,
+        title: "Web Development",
+        description: "High-quality and scalable web applications, ensuring performance and responsiveness.",
+      },
+      {
+        icon: <Layers className="h-8 w-8 text-primary" />,
+        title: "Web Design",
+        description: "Sleek, modern, and user-friendly interfaces that enhance user experience.",
+      },
+      {
+        icon: <Smartphone className="h-8 w-8 text-primary" />,
+        title: "Mobile Apps",
+        description: "Building efficient and interactive mobile applications for Android & iOS.",
+      },
+      {
+        icon: <Database className="h-8 w-8 text-primary" />,
+        title: "Technology & Development",
+        description: "Expertise in Git, Firebase, and cloud solutions for seamless development.",
+      },
+    ].map((service, index) => (
+      <div
+        key={index}
+        className="relative bg-gray-900/70 backdrop-blur-lg border border-gray-800/50 rounded-2xl p-8 shadow-lg group hover:scale-[1.05] transition-transform duration-300"
+      >
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-400/10 to-amber-600/10 opacity-0 group-hover:opacity-20 transition-opacity"></div>
+        <div className="flex items-center justify-center h-16 w-16 rounded-xl bg-gray-800/50 mb-6">
+          {service.icon}
+        </div>
+        <h4 className="text-xl font-semibold text-white mb-3">{service.title}</h4>
+        <p className="text-gray-400 leading-relaxed">{service.description}</p>
+      </div>
+    ))}
+  </div>
+</motion.div>
           </div>
         </section>
+
 
         {/* Skills Section */}
         <section id="skills" className="py-20 relative">
@@ -584,6 +636,7 @@ export default function Portfolio() {
               </motion.div>
             </div>
 
+{/*}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -600,7 +653,7 @@ export default function Portfolio() {
 
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
                 <div className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
-                  4+
+                  5+
                 </div>
                 <p className="text-gray-400">Projects Completed</p>
               </div>
@@ -619,6 +672,8 @@ export default function Portfolio() {
                 <p className="text-gray-400">Awards Received</p>
               </div>
             </motion.div>
+*/}
+
           </div>
         </section>
 
@@ -747,6 +802,7 @@ export default function Portfolio() {
         </section>
 
         {/* Testimonials Section */}
+        {/*}
         <section id="testimonials" className="py-20 relative">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-amber-500/20 rounded-full filter blur-3xl opacity-20"></div>
@@ -821,7 +877,7 @@ export default function Portfolio() {
             </Tabs>
           </div>
         </section>
-
+*/}
         {/* Contact Section */}
         <section id="contact" className="py-20 relative">
           <div className="absolute inset-0 overflow-hidden">
@@ -894,14 +950,14 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <h4 className="font-medium mb-1">Location</h4>
-                      <p className="text-gray-400">Marutikunj, Gurugram, Haryana, 122102</p>
+                      <p className="text-gray-400">Gurugram, Haryana, INDIA, 122102</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-4 pt-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/PuneetSharma9999"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="h-12 w-12 rounded-full bg-gray-900/80 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-colors"
@@ -909,7 +965,7 @@ export default function Portfolio() {
                     <Github className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/puneetsharma999"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="h-12 w-12 rounded-full bg-gray-900/80 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-colors"
@@ -917,7 +973,7 @@ export default function Portfolio() {
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a
-                    href="puneetsharma87734@gmail.com"
+                    href="mailto:puneetsharma87734@gmail.com"
                     className="h-12 w-12 rounded-full bg-gray-900/80 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-colors"
                   >
                     <Mail className="h-5 w-5" />
@@ -1005,12 +1061,16 @@ export default function Portfolio() {
             </div>
 
             <p className="text-gray-400 text-center md:text-left mb-6 md:mb-0">
-              © {new Date().getFullYear()} Puneet Sharma. All rights reserved.
+              © {new Date().getFullYear()} <a href="https://linkedin.com/in/puneetsharma999"
+                target="_blank"
+                className="text-yellow-500 hover:text-yellow-400">Puneet Sharma. </a> 
+                All rights reserved.
             </p>
+            
 
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/PuneetSharma9999"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
@@ -1018,14 +1078,14 @@ export default function Portfolio() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/puneetsharma999"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="puneetsharma87734@gmail.com" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="mailto:puneetsharma87734@gmail.com" className="text-gray-400 hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
