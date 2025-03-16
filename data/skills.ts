@@ -1,64 +1,72 @@
+import { log } from "console";
+
 export const skills = [
   {
     name: "JavaScript",
-    level: 85,
     category: "frontend",
+    logo: "/logo/javascript.png",
   },
   {
     name: "TypeScript",
-    level: 70,
     category: "frontend",
+    logo: "/logo/typescript.png",
   },
   {
     name: "React",
-    level: 80,
     category: "frontend",
+    logo: "/logo/react.png",
+  },
+ 
+  {
+    name: "CSS",
+    category: "frontend",
+    logo: "/logo/css.png",
   },
   {
-    name: "Next.js",
-    level: 65,
+    name: "HTML",
     category: "frontend",
-  },
-  {
-    name: "HTML/CSS",
-    level: 95,
-    category: "frontend",
+    logo: "/logo/HTML.png",
   },
   {
     name: "Tailwind CSS",
-    level: 80,
     category: "frontend",
+    logo: "/logo/tailwind-css.png",
   },
 
   {
     name: "java",
-    level: 70,
     category: "backend",
+    logo: "/logo/java.png",
   },
 
 
   {
     name: "Node.js",
-    level: 55,
     category: "backend",
+    logo: "/logo/nodejs.png",
   },
 
 
   {
     name: "SQL",
-    level: 70,
     category: "backend",
+    logo: "/logo/sql.png",
   },
   {
     name: "Python",
-    level: 80,
     category: "backend",
+    logo: "/logo/python.png",
   },
   
   {
-    name: "DS & Algo",
-    level: 80,
+    name: "C++",
     category: "backend",
+    logo: "/logo/s.png",
+  },
+  {
+    name: "Github",
+    category: "backend",
+    logo: "/logo/github.png",
   },
   
  

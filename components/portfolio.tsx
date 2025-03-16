@@ -23,6 +23,12 @@ import {
 } from "lucide-react"
 
 import { GraduationCap, BookOpen, School } from "lucide-react";
+
+
+import { Award } from "lucide-react";
+import { Briefcase } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
+
  
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -43,7 +49,7 @@ const sections = [
   { id: "about", label: "About", icon: <User className="h-4 w-4" /> },
   { id: "skills", label: "Skills", icon: <Code className="h-4 w-4" /> },
   { id: "projects", label: "Projects", icon: <Layers className="h-4 w-4" /> },
- // { id: "testimonials", label: "Testimonials", icon: <MessageSquare className="h-4 w-4" /> },
+  { id: "certifications", label: "Certifications", icon: <MessageSquare className="h-4 w-4" /> },
   { id: "contact", label: "Contact", icon: <Phone className="h-4 w-4" /> },
 ]
 
@@ -88,57 +94,58 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-gray-100 transition-colors duration-300 dark">
-      {/* Fixed Social Media Links */}
-      <div className="fixed left-6 bottom-0 z-50 hidden md:flex flex-col gap-6 items-center after:content-[''] after:w-[1px] after:h-24 after:bg-gradient-to-b after:from-primary/50 after:to-transparent">
-        <motion.a
-          href="https://github.com/PuneetSharma9999"
-          target="_blank"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          whileHover={{ y: -4, color: "#f59e0b" }}
-          className="text-gray-400 hover:text-primary transition-all duration-300"
-          rel="noreferrer"
-        >
-          <Github className="h-5 w-5" />
-        </motion.a>
-        <motion.a
-          href="https://linkedin.com/in/puneetsharma999"
-          target="_blank"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          whileHover={{ y: -4, color: "#f59e0b" }}
-          className="text-gray-400 hover:text-primary transition-all duration-300"
-          rel="noreferrer"
-        >
-          <Linkedin className="h-5 w-5" />
-        </motion.a>
-        <motion.a
-          href="mailto:puneetsharma87734@gmail.com"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          whileHover={{ y: -4, color: "#f59e0b" }}
-          className="text-gray-400 hover:text-primary transition-all duration-300"
-        >
-          <Mail className="h-5 w-5" />
-        </motion.a>
-      </div>
+    {/* Fixed Social Media Links */}
+<div className="fixed left-4 bottom-4 z-50 flex flex-col gap-4 items-center md:left-6 md:gap-6 md:bottom-0 after:content-[''] after:w-[1px] after:h-16 md:after:h-24 after:bg-gradient-to-b after:from-primary/50 after:to-transparent">
+  <motion.a
+    href="https://github.com/PuneetSharma9999"
+    target="_blank"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.2 }}
+    whileHover={{ y: -4, color: "#f59e0b" }}
+    className="text-gray-400 hover:text-primary transition-all duration-300"
+    rel="noreferrer"
+  >
+    <Github className="h-6 w-6 md:h-5 md:w-5" />
+  </motion.a>
+  <motion.a
+    href="https://linkedin.com/in/puneetsharma999"
+    target="_blank"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.3 }}
+    whileHover={{ y: -4, color: "#f59e0b" }}
+    className="text-gray-400 hover:text-primary transition-all duration-300"
+    rel="noreferrer"
+  >
+    <Linkedin className="h-6 w-6 md:h-5 md:w-5" />
+  </motion.a>
+  <motion.a
+    href="mailto:puneetsharma87734@gmail.com"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.4 }}
+    whileHover={{ y: -4, color: "#f59e0b" }}
+    className="text-gray-400 hover:text-primary transition-all duration-300"
+  >
+    <Mail className="h-6 w-6 md:h-5 md:w-5" />
+  </motion.a>
+</div>
 
-      {/* Fixed Email on Right */}
-      <div className="fixed right-6 bottom-0 z-50 hidden md:flex flex-col items-center after:content-[''] after:w-[1px] after:h-24 after:bg-gradient-to-b after:from-primary/50 after:to-transparent">
-        <motion.a
-          href="mailto:puneetsharma87734@gmail.com"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          whileHover={{ y: -4, color: "#f59e0b" }}
-          className="text-gray-400 hover:text-primary transition-all duration-300 [writing-mode:vertical-lr] tracking-widest text-sm mb-6"
-        >
-          puneetsharma87734@gmail.com
-        </motion.a>
-      </div>
+{/* Fixed Email on Right */}
+<div className="fixed right-4 bottom-4 z-50 flex flex-col items-center md:right-6 md:bottom-0 after:content-[''] after:w-[1px] after:h-16 md:after:h-24 after:bg-gradient-to-b after:from-primary/50 after:to-transparent">
+  <motion.a
+    href="mailto:puneetsharma87734@gmail.com"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.5 }}
+    whileHover={{ y: -4, color: "#f59e0b" }}
+    className="text-gray-400 hover:text-primary transition-all duration-300 tracking-widest text-xs md:text-sm mb-4 md:mb-6 [writing-mode:vertical-lr]"
+  >
+    puneetsharma87734@gmail.com
+  </motion.a>
+</div>
+
 
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-gray-950/80 border-b border-gray-800/50">
@@ -303,7 +310,7 @@ export default function Portfolio() {
                   <div className="absolute -top-4 -left-4 bg-gray-900/90 backdrop-blur-sm border border-gray-800 rounded-2xl p-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
                     <div className="flex items-center gap-2">
                       <Star className="h-4 w-4 text-amber-400" />
-                      <span className="text-sm font-medium">5+ Months Experience</span>
+                      <span className="text-sm font-medium">6+ Months Experience</span>
                     </div>
                   </div>
                 </div>
@@ -356,106 +363,120 @@ export default function Portfolio() {
               </p>
             </motion.div>
 
+
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-amber-500/10 to-amber-600/10 blur-xl"></div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden border border-gray-800 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-                  <img
-                    src="puneet.png"
-                    alt="Puneet Sharma"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
+  {/* Image Section */}
+  <motion.div
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+    className="relative"
+  >
+    {/* Gradient Background */}
+    <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-amber-500/10 to-amber-600/10 blur-xl"></div>
+    
+    {/* Image Container */}
+    <div className="relative aspect-square rounded-2xl overflow-hidden border border-gray-800 shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-3/4 mx-auto">
+      <img
+        src="puneet.png"
+        alt="Puneet Sharma"
+        className="w-full h-full object-cover"
+      />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="flex flex-wrap gap-2">
-                      <Badge className="bg-amber-500/20 text-amber-400 border-amber-500/30 backdrop-blur-sm">
-                        React.js
-                      </Badge>
-                      <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30 backdrop-blur-sm">
-                        TypeScript
-                      </Badge>
-                      <Badge className="bg-green-500/20 text-green-400 border-green-500/30 backdrop-blur-sm">
-                        JavaScript
-                      </Badge>
-                      <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30 backdrop-blur-sm">
-                        Next.js
-                      </Badge>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+      {/* Badges */}
+      <div className="absolute bottom-0 left-0 right-0 p-6">
+        <div className="flex flex-wrap gap-2">
+          <Badge className="bg-amber-500/20 text-amber-400 border-amber-500/30 backdrop-blur-sm">
+            React.js
+          </Badge>
+          <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30 backdrop-blur-sm">
+            TypeScript
+          </Badge>
+          <Badge className="bg-green-500/20 text-green-400 border-green-500/30 backdrop-blur-sm">
+            JavaScript
+          </Badge>
+          <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30 backdrop-blur-sm">
+            Next.js
+          </Badge>
+        </div>
+      </div>
+    </div>
+  </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-6"
-              >
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Who am I?</h3>
-                  <p className="text-gray-400">
-                    I'm Puneet Kumar Sharma, a versatile Full-Stack Developer specializing in creating dynamic and user-centric
-                    applications. With a strong foundation in both web and mobile development, I bring a holistic
-                    approach to digital solutions, ensuring that each project is not only functional and efficient but
-                    also visually engaging and intuitive.
-                  </p>
-                  <p className="text-gray-400">
-                    My job is to build applications that are user-friendly and aesthetically pleasing. I bring a
-                    personal touch to each project, ensuring it stands out and effectively communicates your brand's
-                    identity.
-                  </p>
-                </div>
+  {/* About Section */}
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    className="space-y-6"
+  >
+    {/* About Text */}
+    <div className="space-y-4">
+      <h3 className="text-2xl font-bold">Who am I?</h3>
+      <p className="text-gray-400">
+        I'm Puneet Kumar Sharma, a versatile Full-Stack Developer specializing in creating dynamic and user-centric
+        applications. With a strong foundation in both web and mobile development, I bring a holistic
+        approach to digital solutions, ensuring that each project is not only functional and efficient but
+        also visually engaging and intuitive.
+      </p>
+      <p className="text-gray-400">
+        My job is to build applications that are user-friendly and aesthetically pleasing. I bring a
+        personal touch to each project, ensuring it stands out and effectively communicates your brand's
+        identity.
+      </p>
+    </div>
 
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Phone className="h-5 w-5 text-primary" />
-                      <h4 className="font-medium">Phone</h4>
-                    </div>
-                    <p className="text-gray-400">+91  91627 80802</p>
-                  </div>
+    {/* Contact Details Grid */}
+    <div className="grid grid-cols-2 gap-6">
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <Phone className="h-5 w-5 text-primary" />
+          <h4 className="font-medium">Phone</h4>
+        </div>
+        <p className="text-gray-400">+91 91627 80802</p>
+      </div>
 
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Mail className="h-5 w-5 text-primary" />
-                      <h4 className="font-medium">Email</h4>
-                    </div>
-                    <p className="text-gray-400">puneetsharma87734@gmail.com</p>
-                  </div>
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <Mail className="h-5 w-5 text-primary" />
+          <h4 className="font-medium">Email</h4>
+        </div>
+        <p className="text-gray-400">puneetsharma87734@gmail.com</p>
+      </div>
 
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-5 w-5 text-primary" />
-                      <h4 className="font-medium">Experience</h4>
-                    </div>
-                    <p className="text-gray-400">5+ Months</p>
-                  </div>
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <Calendar className="h-5 w-5 text-primary" />
+          <h4 className="font-medium">Experience</h4>
+        </div>
+        <p className="text-gray-400"> Internship at Hackveda Limited (6+ Months) </p>
+      </div>
 
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="h-5 w-5 text-primary" />
-                      <h4 className="font-medium">Location</h4>
-                    </div>
-                    <p className="text-gray-400">Gurugram, Haryana, INDIA, 122102</p>
-                  </div>
-                </div>
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <MapPin className="h-5 w-5 text-primary" />
+          <h4 className="font-medium">Location</h4>
+        </div>
+        <p className="text-gray-400">Gurugram, Haryana, INDIA, 122102</p>
+      </div>
+    </div>
 
-                <Button
-                  className="mt-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-gray-900 rounded-full px-6 shadow-[0_0_15px_rgba(245,158,11,0.5)]"
-                  onClick={() => handleSectionChange("contact")}
-                >
-                  Get In Touch
-                </Button>
-              </motion.div>
-            </div>
+    {/* Get In Touch Button */}
+    <Button
+      className="mt-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-gray-900 rounded-full px-6 shadow-[0_0_15px_rgba(245,158,11,0.5)]"
+      onClick={() => handleSectionChange("contact")}
+    >
+      Get In Touch
+    </Button>
+  </motion.div>
+</div>
+
+
 
 {/*education section in about*/}
   <motion.div
@@ -468,7 +489,7 @@ export default function Portfolio() {
   {/* Section Title */}
   <h3 className="text-3xl font-bold mb-12 text-center text-primary">Education</h3>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 p-16 lg:grid-cols-3 gap-8">
     {/* 10th Grade */}
     <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center flex flex-col items-center justify-center">
       <div className="h-14 w-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mb-4">
@@ -552,6 +573,8 @@ export default function Portfolio() {
         </section>
 
 
+
+
         {/* Skills Section */}
         <section id="skills" className="py-20 relative">
           <div className="absolute inset-0 overflow-hidden">
@@ -569,113 +592,53 @@ export default function Portfolio() {
               <Badge className="px-4 py-1.5 text-sm font-medium bg-gray-800/80 text-primary border-primary/20 backdrop-blur-sm mb-4">
                 My Skills
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">My technical expertise</h2>
-              <p className="text-gray-400">
-                I'm spending lot of time to refining my skills in both frontend and backend development. Here's a breakdown of my
-                technical expertise.
-              </p>
-            </motion.div>
+        
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">My Technical Expertise</h2>
+          <p className="text-gray-400">
+            I have honed my skills in both frontend and backend development. Here are the technologies I specialize in:
+          </p>
+        </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="space-y-8"
-              >
-                <h3 className="text-2xl font-bold">Frontend Development</h3>
-
-                <div className="space-y-6">
-                  {skills
-                    .filter((skill) => skill.category === "frontend")
-                    .map((skill, index) => (
-                      <div key={index} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <h4 className="font-medium">{skill.name}</h4>
-                          <span className="text-primary">{skill.level}%</span>
-                        </div>
-                        <Progress value={skill.level} className="h-2 bg-gray-800">
-                          <div
-                            className="h-full bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"
-                            style={{ width: `${skill.level}%` }}
-                          />
-                        </Progress>
-                      </div>
-                    ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-8"
-              >
-                <h3 className="text-2xl font-bold">Backend Development</h3>
-
-                <div className="space-y-6">
-                  {skills
-                    .filter((skill) => skill.category === "backend")
-                    .map((skill, index) => (
-                      <div key={index} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <h4 className="font-medium">{skill.name}</h4>
-                          <span className="text-primary">{skill.level}%</span>
-                        </div>
-                        <Progress value={skill.level} className="h-2 bg-gray-800">
-                          <div
-                            className="h-full bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"
-                            style={{ width: `${skill.level}%` }}
-                          />
-                        </Progress>
-                      </div>
-                    ))}
-                </div>
-              </motion.div>
-            </div>
-
-{/*}
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 px-4 md:px-8 lg:px-16">
+          {["frontend", "backend"].map((category) => (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={category}
+              initial={{ opacity: 0, x: category === "frontend" ? -20 : 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+              transition={{ duration: 0.6 }}
+              className="space-y-14 text-center"
             >
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
-                <div className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
-                  5+
-                </div>
-                <p className="text-gray-400">Months of Experience</p>
-              </div>
-
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
-                <div className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
-                  5+
-                </div>
-                <p className="text-gray-400">Projects Completed</p>
-              </div>
-
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
-                <div className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
-                  2+
-                </div>
-                <p className="text-gray-400">Happy Clients</p>
-              </div>
-
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
-                <div className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
-                  2+
-                </div>
-                <p className="text-gray-400">Awards Received</p>
+              <h3 className="text-2xl font-bold text-white text-center">
+                {category.charAt(0).toUpperCase() + category.slice(1)} Development
+              </h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-6 place-items-center">
+                {skills.filter(skill => skill.category === category).map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="flex flex-col items-center"
+                  >
+                    <motion.img 
+                      src={skill.logo} 
+                      alt={skill.name} 
+                      className="w-24 h-24 object-contain mb-2" 
+                      whileHover={{ scale: 1.1 }}
+                    />
+                    <span className="text-white text-sm font-medium">{skill.name}</span>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
-*/}
-
-          </div>
+          ))}
+        </div>
+        </div>
         </section>
+
+
 
         {/* Projects Section */}
         <section id="projects" className="py-20 relative">
@@ -801,15 +764,15 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        {/*}
-        <section id="testimonials" className="py-20 relative">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-amber-500/20 rounded-full filter blur-3xl opacity-20"></div>
-          </div>
 
-          <div className="container mx-auto px-6 relative z-10">
-            <motion.div
+
+
+
+
+
+{/* Certifications Section */}
+              <motion.div
+              id="certifications"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -817,67 +780,85 @@ export default function Portfolio() {
               className="max-w-xl mx-auto text-center mb-16"
             >
               <Badge className="px-4 py-1.5 text-sm font-medium bg-gray-800/80 text-primary border-primary/20 backdrop-blur-sm mb-4">
-                Testimonials
+                Certificates
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">What clients say</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Certifications</h2>
               <p className="text-gray-400">
-                I've had the pleasure of working with amazing clients who have shared their experiences working with me.
+                Here are some of my recent certifications. Each certification is unique and showcases different skills and
+                technologies.
               </p>
             </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  className="mt-24"
+  className="flex flex-wrap justify-center gap-8 mb-12"
+>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  px-4 md:px-8 lg:px-16">
+    {[
+       {
+        title: "Full Stack Web Development",
+        issuer: "Hackveda Limited",
+        link: "Internship-certificate-Hackveda.jpg",
+      },
+      {
+        title: "JavaScript for Beginners",
+        issuer: "Simplilearn",
+        link: "JavaScript.jpg",
+      },
+      {
+        title: "Introduction to Gen AI",
+        issuer: "Google Cloud Skills Boost",
+        link: "genai.png",
+      },
+      {
+        title: "Introduction to HTML",
+        issuer: "Simplilearn",
+        link: "HTML.jpg",
+      },
+      {
+        title: "Prompt Engineering for Gen AI",
+        issuer: "LinkedIn",
+        link: "promptengineering.jpeg",
+      },
+      {
+        title: "C Programming Language",
+        issuer: "Great Learning",
+        link: "Clanguage.jpg",
+      },
+      {
+        title: "Operators in My SQL",
+        issuer: "Great Learning",
+        link: "SQL.jpg",
+      },
+    ].map((cert, index) => (
+      <div
+        key={index}
+        className="relative bg-gray-900/70 backdrop-blur-lg border border-gray-800/50 rounded-2xl p-8 shadow-lg group hover:scale-[1.05] transition-transform duration-300"
+      >
 
-            <Tabs defaultValue="all" className="w-full">
-              <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-12 bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-full p-1">
-                <TabsTrigger
-                  value="all"
-                  className="rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-amber-500 data-[state=active]:to-amber-600 data-[state=active]:text-gray-900 data-[state=active]:shadow-[0_0_10px_rgba(245,158,11,0.5)]"
-                >
-                  All
-                </TabsTrigger>
-                <TabsTrigger
-                  value="clients"
-                  className="rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-amber-500 data-[state=active]:to-amber-600 data-[state=active]:text-gray-900 data-[state=active]:shadow-[0_0_10px_rgba(245,158,11,0.5)]"
-                >
-                  Clients
-                </TabsTrigger>
-                <TabsTrigger
-                  value="colleagues"
-                  className="rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-amber-500 data-[state=active]:to-amber-600 data-[state=active]:text-gray-900 data-[state=active]:shadow-[0_0_10px_rgba(245,158,11,0.5)]"
-                >
-                  Colleagues
-                </TabsTrigger>
-              </TabsList>
 
-              <TabsContent value="all" className="mt-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {testimonials.map((testimonial, index) => (
-                    <TestimonialCard key={index} testimonial={testimonial} />
-                  ))}
-                </div>
-              </TabsContent>
+        <div className="relative z-10 text-center">
+          <h4 className="text-xl font-semibold text-white mb-2">{cert.title}</h4>
+          <p className="text-gray-400 mb-4">Issued by {cert.issuer}</p>
+          <a
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 px-4 py-2 rounded-lg bg-amber-500 text-gray-900 font-medium hover:bg-amber-600 transition-colors"
+          >
+            View Certificate
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</motion.div>
 
-              <TabsContent value="clients" className="mt-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {testimonials
-                    .filter((t) => t.type === "client")
-                    .map((testimonial, index) => (
-                      <TestimonialCard key={index} testimonial={testimonial} />
-                    ))}
-                </div>
-              </TabsContent>
 
-              <TabsContent value="colleagues" className="mt-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {testimonials
-                    .filter((t) => t.type === "colleague")
-                    .map((testimonial, index) => (
-                      <TestimonialCard key={index} testimonial={testimonial} />
-                    ))}
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </section>
-*/}
+
         {/* Contact Section */}
         <section id="contact" className="py-20 relative">
           <div className="absolute inset-0 overflow-hidden">
