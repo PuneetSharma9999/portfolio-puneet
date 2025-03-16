@@ -489,7 +489,7 @@ export default function Portfolio() {
   {/* Section Title */}
   <h3 className="text-3xl font-bold mb-12 text-center text-primary">Education</h3>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 p-16 lg:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 p-4 lg:grid-cols-3 gap-8">
     {/* 10th Grade */}
     <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center flex flex-col items-center justify-center">
       <div className="h-14 w-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mb-4">

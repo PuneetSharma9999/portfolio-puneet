@@ -25,7 +25,7 @@ export const skills = [
   {
     name: "HTML",
     category: "frontend",
-    logo: "/logo/HTML.png",
+    logo: "/logo/html.png",
   },
   {
     name: "Tailwind CSS",
@@ -68,8 +68,5 @@ export const skills = [
     category: "backend",
     logo: "/logo/github.png",
   },
-  
- 
-
 ]
 
